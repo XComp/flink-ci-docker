@@ -1,5 +1,8 @@
 FROM ubuntu:20.04
 
+# disable interactive dialog in debconf
+ARG DEBIAN_FRONTEND="noninteractive"
+
 # install packages
 RUN set -eux; \
 	apt-get update; \
