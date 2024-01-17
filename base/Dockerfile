@@ -30,6 +30,9 @@ RUN set -eux; \
 		zip; \
 	rm -rf /var/lib/apt/lists/*;
 
+# Install python symlink to support python calls
+RUN ln -s /usr/bin/python3 /usr/bin/python
+
 # Install latest git
 RUN set -eux; \
   add-apt-repository -y ppa:git-core/ppa; \
