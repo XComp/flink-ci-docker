@@ -2,8 +2,32 @@ FROM ubuntu:22.04
 
 # install packages
 RUN set -eux; \
-	apt-get update; apt-get upgrade -y ; \
-	apt-get install -y gosu sudo locales make less build-essential openjdk-8-jdk libjemalloc-dev curl libapr1 unzip uuid-runtime jq bsdmainutils wget python3 docker.io psmisc software-properties-common apt-transport-https net-tools docker-compose zip; \
+	apt-get update; \
+	apt-get upgrade -y ; \
+	apt-get install -y \
+		gosu \
+		sudo \
+		locales \
+		make \
+		less \
+		build-essential \
+		openjdk-8-jdk \
+		libjemalloc-dev \
+		curl \
+		libapr1 \
+		unzip \
+		uuid-runtime \
+		jq \
+		bsdmainutils \
+		wget \
+		python3 \
+		docker.io \
+		psmisc \
+		software-properties-common \
+		apt-transport-https \
+		net-tools \
+		docker-compose \
+		zip; \
 	rm -rf /var/lib/apt/lists/*;
 
 # Install latest git
